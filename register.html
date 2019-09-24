@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style type="text/css">
+            html{
+                background: url(img/bg1.jpg) no-repeat center center fixed;
+                background-size: cover;
+            }
+            body 
+            {
+                background: transparent;
+            }
+            .login-panel
+            {
+                padding: 15px;
+                border-radius: 0;
+                border: 1px solid #ccc;
+                background: url(img/wrp.png);
+                margin-top: 10px;
+
+                }
+             .login-panel a{
+                text-decoration: none;
+                color: white;
+              }  
+        </style>
+    </head>
+    <body>
+        <div>
+<div  class="middle-box login-panel loginscreen" style="width: 450px;">
+
+        <div>
+
+            <h3 class="text-center">Personal Information</h3>
+            <p class="text-center">Fill in your details so we can serve you better..</p>
+            
+            
+            <form class="m-t" role="form" method="post" enctype="multipart/form-data"  action="personal_info_update.php">
+                
+                <div class="form-group" ><span class="font-bold">Full name:</span>
+                           <input type="text" class="form-control" name="name" pattern="[A-Za-z ]{2,}" title="Only Alphabets" placeholder="" required="">
+                        </div>
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Mobile no:</span>
+                           <input type="tel" class="form-control" name="mobile_no"  maxlength="10" placeholder="" required="">
+                           <!-- pattern="[0-9]{9}" title="Phone number with  9 digit with 0-9" -->
+                        </div>
+                    
+                        <div class="form-group col-6">
+                            <span class="font-bold">Date Of Birth</span><input type="date" name="dob" class="form-control"  placeholder="" required="">
+                        </div> 
+                </div>
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Mother name:</span>
+                           <input type="text" class="form-control" name="mother_name" pattern="[A-Za-z ]{2,}" title="Only Alphabets" placeholder="" required="">
+                        </div>
+                    
+                        <div class="form-group col-6" ><span class="font-bold">Father name:</span>
+                           <input type="text" class="form-control" name="father_name" pattern="[A-Za-z ]{2,}" title="Only Alphabets" placeholder="" required="">
+                        </div>
+                </div>
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Caste:</span>
+                           <select class="form-control" id="" name="caste" required="">
+                            <option disabled selected>---Select---</option>
+                            <option value="General">General</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                        </select>
+                        </div>
+                    
+                        <div class="form-group col-6" ><span class="font-bold">Gender:</span>
+                          <select class="form-control" id="" name="gender" required="">
+                            <option disabled selected>---Select---</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    <span class="font-bold">E-mail: </span><input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Enter valid email" name="email"  placeholder="" required="">
+                </div>
+
+                <div class="form-group">
+                    <span class="font-bold">Address: </span><textarea class="form-control" rows="2" value=""  name="address" placeholder="" required=""></textarea>
+                </div>
+
+                <div class="form-group">
+                     <span class="font-bold">Photo : </span><input type="file" accept="image/jpeg, image/png" class="form-control" name="myimage">
+                 </div>
+
+                <a href="registerv2.html"><input type="submit" value="next" name="submit" class="btn bg-yellow btn-block btn-sm"</a> 
+            </form>
+           
+        </div>
+</div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

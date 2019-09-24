@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style type="text/css">
+            html{
+                background: url(img/bg1.jpg) no-repeat center center fixed;
+                background-size: cover;
+            }
+            body 
+            {
+                background: transparent;
+            }
+            .login-panel
+            {
+                padding: 15px;
+                border-radius: 0;
+                border: 1px solid #ccc;
+                background: url(img/wrp.png);
+                margin-top: 20px;
+
+                }
+        </style>
+        <script type="text/javascript">
+        	function myFunction(e) {
+			   var data= document.getElementById("pt").value = e.target.value
+			    if(data=="CBSE)")
+			     	document.getElementById("amt").value = "1100";
+			 	else if(data=="DEGREE")
+			 		document.getElementById("amt").value = "1300";
+			 	else if(data=="EVENING")
+			 		document.getElementById("amt").value = "1680";
+			 	else if(data=="HIGH SCHOOL")
+			 		document.getElementById("amt").value = "600";
+			 	else if(data=="PHD")
+			 		document.getElementById("amt").value = "1680";
+			 	else if(data=="PRIMARY")
+			 		document.getElementById("amt").value = "200";
+			 	else if(data=="PROFESSIONAL")
+			 		document.getElementById("amt").value = "1100";
+			 	else if(data=="TECHNICAL/MEDICAL")
+			 		document.getElementById("amt").value = "1880";
+			 	else if(data=="PUC")
+			 		document.getElementById("amt").value = "1100";
+			}
+			
+</script>
+        </script>
+    </head>
+    <body>
+        <div>
+<div  class="middle-box login-panel loginscreen" style="width: 400px;">
+
+        <div>
+
+            <h2 class="text-center font-bold">Bus Pass</h2>
+            <p class="text-center">Fill in your details so we can serve you better..</p>
+            
+            
+            <form class="m-t" role="form" method="post"  action="buspass_information_update.php">
+                
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">From stop:</span>
+                           <input type="text" class="form-control" name="source" pattern="[A-Za-z]{2,}" title="Only Alphabets" placeholder="" required="">
+                        </div>
+                    
+                        <div class="form-group col-6">
+                            <span class="font-bold">From Destination: </span><input type="text" class="form-control" pattern="[A-Za-z]{2,}" title="Only Alphabets" name="destination"   placeholder="" required="">
+                        </div> 
+                </div>
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Via:</span>
+                           <input type="text" class="form-control" name="via" pattern="[A-Za-z]{2,}" title="Only Alphabets" placeholder="" required="">
+                        </div>
+                    
+                        <div class="form-group col-6">
+                            <span class="font-bold">Changeover: </span><input type="text" class="form-control" pattern="[A-Za-z]{2,}" title="Only Alphabets" name="changeover"   placeholder="" required="">
+                        </div> 
+                </div>
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Institute type:</span>
+                           <select class="form-control" name="institution_type" onchange="myFunction(event)" required="">
+                            <option disabled selected >---Select---</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="DEGREE">DEGREE</option>
+                            <option value="EVENING">EVENING</option>
+                            <option value="HIGH SCHOOL">HIGH SCHOOL</option>
+                            <option value="PHD">PHD</option>
+                            <option value="PRIMARY">PRIMARY</option>
+                            <option value="PROFESSIONAL">PROFESSIONAL</option>
+                            <option value="PUC">PUC</option>
+                            <option value="TECHNICAL/MEDICAL">TECHNICAL/MEDICAL</option>
+                        </select>
+                        </div>
+                    
+                        <div class="form-group col-6">
+                            <span class="font-bold">Year/Standard: </span><input type="text" class="form-control" name="year"   placeholder="" required>
+                        </div> 
+                </div>
+
+                <div class="form-group">
+                    <span class="font-bold">Institution Name: </span><input type="text" class="form-control" pattern="[A-Za-z]{2,}" title="Only Alphabets" name="institution_name"   placeholder="" required="">
+                </div> 
+
+                <div class="row" >
+                       <div class="form-group col-6" ><span class="font-bold">Pass Type:</span>
+                           <input type="text" class="form-control" name="pass_type" id="pt" placeholder="" required="" readonly="">
+                        </div>
+                    
+                        <div class="form-group col-6">
+                            <span class="font-bold">Amount to collect: </span><input id="amt" type="text" class="form-control" name="amt"   placeholder="" required="" readonly="" >
+                        </div> 
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-6">
+                <input type="radio" value="cod" name="pay"> Cash on Delivery
+            </div>
+                <div class="col-6">
+             <input type="radio" value="po" name="pay"> Pay Online
+              </div>
+                 </div>
+
+              
+
+       <!--  <div class="text-center"> -->
+
+                
+                <button type="submit" name="submit" class="btn bg-yellow btn-block btn-sm">Register</button>
+            </form>
+           
+        </div>
+</div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

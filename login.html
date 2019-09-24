@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <style type="text/css">
+             html{
+                background: url(img/bg1.jpg) no-repeat center center fixed;
+                background-size: cover;
+            }
+            body 
+            {
+                background: transparent;
+            }
+            .login-panel
+            {
+                margin-top: 20px;
+                padding: 15px;
+                border-radius: 0;
+                border: 1px solid #ccc;
+                background: url(img/wrp.png);
+                }
+            .pad{
+                margin-top: 8%;
+            }
+            .logo-wrape
+                {
+                    margin: 0 0 25px 0;
+                    text-align: left;
+                    } 
+            .logo-wrape img{
+                width: 50px;
+                height: 50px;
+            }
+            .pad a{
+                color: white;
+            }
+            .pad a:hover{
+                color: white;
+            }
+           
+        </style>
+        
+	</head>
+	<body>
+<div class="container-fluid pad">
+    <div class="row">
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"><a class="btn round" href="register.html"><i class="fa fa-user-plus"  aria-hidden="true"></i></a></div>
+            <div class="col-1"><a class="btn round" href="index.php#pass"><i class="fa fa-download"  aria-hidden="true"></i></a></div>
+    </div>
+	<div class="middle-box text-center login-panel loginscreen animated fadeInDown"> 
+        <div>
+
+            <h2 class="logo-wrape"><img src="img/logo1.png">
+            Bus Hub</h2> 
+
+            <form class="m-t" role="form" method="post" action="">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="uname" placeholder="Username" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="pass" placeholder="Password" required="">
+                </div>
+                <button type="submit" name="submit" style="" class="log btn bg-yellow btn-block btn-sm">Login</button>
+                 <a href=""><p class="m-t"> <small>Forgot password</small> </p></a>
+            </form>
+        </div>
+    </div>
+</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

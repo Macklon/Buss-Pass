@@ -2,6 +2,6 @@ Master in Computer Applications
 
 Semester 1
 
-Web Technology Assignment
+Web Programming Assignment
 
 Generating Buss Pass
